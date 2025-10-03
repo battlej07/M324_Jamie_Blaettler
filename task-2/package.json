@@ -4,19 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "node node_modules/.bin/mocha ./"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "eslint": "^9.36.0",
     "globals": "^16.4.0"
   },
   "dependencies": {
+    "mocha": "^11.7.4",
     "prettier": "^3.6.2"
   }
 }
