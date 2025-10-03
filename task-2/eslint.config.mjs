@@ -1,5 +1,4 @@
 import js from '@eslint/js'
-import globals from 'globals'
 import { defineConfig } from 'eslint/config'
 
 export default defineConfig([
@@ -7,7 +6,12 @@ export default defineConfig([
     files: ['**/*.{js,mjs,cjs}'],
     plugins: { js },
     extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        it: 'readonly',
+      },
+    },
     rules: {
       camelcase: ['error', { properties: 'always' }],
     },

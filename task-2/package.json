@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm run format && npm run lint && npm run test",
     "start": "node index.js",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings=0",
     "format": "prettier --write .",
     "test": "node node_modules/.bin/mocha ./"
   },
