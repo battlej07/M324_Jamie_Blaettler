@@ -10,6 +10,7 @@ export default defineConfig([
       globals: {
         describe: 'readonly',
         it: 'readonly',
+        console: 'readonly',
       },
     },
     rules: {
