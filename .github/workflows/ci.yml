@@ -15,10 +15,20 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: "20.x"
 
       - name: Install dependencies
         run: npm install
+        working-directory: Task2
 
       - name: Run linter
         run: npm run lint
+        working-directory: Task2
+
+      - name: Run formater
+        run: npm run format
+        working-directory: Task2
+
+      - name: Run tests
+        run: npm run test
+        working-directory: Task2
