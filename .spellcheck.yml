@@ -1,0 +1,6 @@
+matrix:
+  - name: english
+    sources:
+      - "**/*.md"
+    aspell:
+      lang: en
